@@ -1,0 +1,111 @@
+/*All Elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lobster", sans-serif;
+}
+/*Changing Element Size - Smaller Calendar*/
+html{
+    font-size: 75%;
+}
+/*Expanding and Aligning Container Element to Entire Page*/
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #FFC0CB;
+    color:#262626;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Calendar*/
+.calendar{
+    width:45rem;
+    height: 52rem;
+    background-color: rgba(236, 43, 210, 0.404);
+    box-shadow: darkgrey;
+}
+/*Month*/
+.month{
+    width: 100%;
+    height: 12rem;
+    background-color: rgb(245, 9, 225);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.2rem 0.3rem #f5f0f0;
+    border: 0.2rem solid #262626;
+}
+/*Month - Styling Individual Elements*/
+.month i{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+/*Month - Current Month*/
+.month h1{
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+/*Month - Paragraph*/
+.month p{
+    font-size: 1.6rem;
+}
+/*Weekdays*/
+.weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+/*Weekdays - Individually*/
+.weekdays div {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(44.2rem/7);  /*Width of Cal. = 45rem, Padding = 0.4rem*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0.1rem .2rem #f5f0f0;
+}
+/*Days*/
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+/*Days - Individually*/
+.days div {
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: calc(40.2rem/ 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0.1rem 0.2rem #f5f0f0;
+    transition: background-color 0.2s; /*Timed Transition for Hover*/
+}
+/*Days - Be able to Hover over Each, except Today*/
+.days div:hover:not(.today){
+    background-color: #FFC0CB;
+    border: 0.2rem solid #262626;
+    cursor: pointer;
+}
+/*Prev & Next Day - Decreasing Opacity*/
+.prev-date, 
+.next-date {
+    opacity: 0.5;
+}
+/*Today - Diff. Background Color*/
+.today {
+    background-color: rgb(247, 243, 246);
+}
